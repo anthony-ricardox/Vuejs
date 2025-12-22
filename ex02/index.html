@@ -9,20 +9,23 @@
 <body>
     
     <div id="text"> 
-    
+        <input type="text" v-on:input="alterarTitulo">
         <h1>{{titulo}}</h1>
         
     </div>
 </body>
 
-<script>   
-
+<script>    
      new Vue({ 
         el: '#text',
         data:{  
             titulo: 'olá,Mundo = Vuejs'
+        },
+        methods:{  
+            alterarTitulo(event){   
+                this.titulo = event.target.value
+            }
         }
-    
     })
 </script>
 </html>
