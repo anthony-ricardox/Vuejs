@@ -5,7 +5,8 @@ new Vue({
     data:{  
         nome: 'Anthony Ricardo',
         idade: 23,
-        titulo: 'Digite seu nome!'
+        imagem: 'https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg'
+       
         
     },
     methods:{   
