@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
+    
+    <div id="app">
+       
+        <p>
+            {{contador}}
+        </p>
+        <button v-on:click="soma(5, $event)"> somar 1</button>
+
+        <p v-on:mousemove="atualizarXY">
+            Mouse: {{x}} e {{y}}
+
+            <span  v-on:mousemove.stop="parar">  
+                PARA AQUII!!!!
+            </span>
+        
+        </p>
+        <a v-on:click.prevent="" href="https://www.netflix.com/br/">Netflix</a>
+    </div>
+</body>
+
+   <script> 
+        new Vue({   
+            el: '#app',
+            data:{  
+                contador: 0,
+                x: 0,
+                y: 0,
+
+            },
+            methods:{  
+              soma(passo, event){   
+                console.log(passo, event)
+               this.contador+= passo
+
+              } , 
+              atualizarXY(){    
+                this.x = event.clientX
+                this.y = event.clientY
+              } /*,  
+              parar(ev){  
+                ev.stop.Propagation()
+              }*/
+            }
+        })
+   </script>
+</html>
