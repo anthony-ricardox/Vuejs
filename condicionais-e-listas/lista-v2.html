@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+      <style>   
+            ul{ 
+                list-style-type: none;
+            }
+      </style>
+</head>
+<body>
+        <div id="app">  
+            <ul>    
+                <li v-for="(cor, i) in cores"> {{i + 1}}) - {{cor}} </li>
+            </ul>
+        </div>
+
+    <script>    
+
+        new Vue({   
+            el:'#app',
+            data:{  
+                cores: ['Vermelhor', 'Azul', 'Verde', 'Amarelo'],
+                pessoas:[
+                    {nome: 'Anthony' ,idade: 20, peso: 80},
+                    {nome: 'Lucas', idade: 20, peso: 80}
+                ]
+            }
+
+        })
+    
+    </script>
+</body>
+</html>
