@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+body{   
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+div#app{    
+    display: flex;
+    flex-flow: column wrap;
+}
+
+div.panel{  
+    margin: 10px;
+    padding: 20px;
+    box-shadow: 0px 2px 10px black;
+}
